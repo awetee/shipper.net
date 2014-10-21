@@ -188,6 +188,10 @@
     <Compile Include="ViewModels\ShoppingCartViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\DefaultConnection.mdf" />
+    <Content Include="App_Data\DefaultConnection_log.ldf">
+      <DependentUpon>DefaultConnection.mdf</DependentUpon>
+    </Content>
     <Content Include="App_Data\Shipper2.Models.ShipperContext.mdf" />
     <Content Include="App_Data\Shipper2.Models.ShipperContext_log.ldf">
       <DependentUpon>Shipper2.Models.ShipperContext.mdf</DependentUpon>
