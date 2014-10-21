@@ -1,0 +1,12 @@
+﻿@model IEnumerable<Shipper2.Models.ProductCategory>
+    <ul id="categories">
+        @foreach (var productCategory in Model)
+        {
+            <li>
+                @Html.ActionLink(productCategory.Name,
+                    "Browse", "Store",
+                      new { productCategory = productCategory.Name }, null)
+        </li>
+        }
+    </ul>
+

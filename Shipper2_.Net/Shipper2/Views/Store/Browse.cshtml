@@ -1,0 +1,23 @@
+﻿@model Shipper2.Models.ProductCategory
+@{
+    ViewBag.Title = "Browse";
+    Layout = "~/Views/Shared/_StoreLayout.cshtml";
+}
+
+<div class="genre">
+    <h3><em>@Model.Name</em> Product Categories</h3>
+
+    <ul id="album-list">
+        @foreach (var product in Model.Products)
+        {
+            <li>
+                <a href="@Url.Action("Details",
+            new { id = product.ProductId })">
+                    <img alt="@product.Name"
+                         src="@product.ProductImage" />
+                    <span>@product.Name</span>
+                </a>
+            </li>
+        }
+    </ul>
+</div>

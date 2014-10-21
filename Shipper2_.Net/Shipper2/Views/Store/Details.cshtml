@@ -1,0 +1,29 @@
+﻿@model Shipper2.Models.Product
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_StoreLayout.cshtml";
+}
+<h2>Album: @Model.Name</h2>
+<p>
+    <img alt="@Model.Name"
+         src="@Model.ProductImage" />
+</p>
+<div id="album-details">
+    <p>
+        <em>Product Category:</em>
+        @Model.ProductCategory.Name
+    </p>
+    <p>
+        <em>Retailer:</em>
+        @Model.Retailer.Name
+    </p>
+    <p>
+        <em>Price:</em>
+        @String.Format("{0:F}",
+Model.Price)
+    </p>
+    <p class="button">
+        @Html.ActionLink("Add to cart", "AddToCart",
+        "ShoppingCart", new { id = Model.ProductId }, "")
+    </p>
+</div>
