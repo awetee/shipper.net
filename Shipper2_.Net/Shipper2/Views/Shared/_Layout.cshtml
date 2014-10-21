@@ -17,7 +17,8 @@
             <li><a href="@Url.Content("~/Store/")">Store</a></li>
             <li>@{Html.RenderAction("CartSummary", "ShoppingCart");}</li>
             <li><a href="@Url.Content("~/StorageManager/")">Admin</a></li>
-        </ul>        
+            @Html.Partial("_LoginPartial")
+        </ul>     
     </div>
 
     <div id="main">

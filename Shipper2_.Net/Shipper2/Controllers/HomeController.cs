@@ -7,6 +7,7 @@ using System.Web.Mvc;
 
 namespace Shipper2.Controllers
 {
+    [RequireHttps]
     public class HomeController : Controller
     {
         ShipperContext storeDB = new ShipperContext();
