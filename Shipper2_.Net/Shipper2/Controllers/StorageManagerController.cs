@@ -116,7 +116,7 @@ namespace Shipper2.Controllers
 
         // POST: StorageManager/Delete/5
         [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
+        //[ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
             Product product = db.Products.Find(id);
